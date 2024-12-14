@@ -11,6 +11,10 @@
 
 https://ese5180.github.io/fp-f24-report-website-t01-crazy-wednesday/
 
+## GitHub URL
+
+https://github.com/ese5180/fp-f24-report-website-t01-crazy-wednesday.git
+
 ## Team Selection
 
 Team Name: Crazy_Wednesday
