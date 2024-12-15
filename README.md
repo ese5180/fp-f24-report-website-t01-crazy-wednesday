@@ -1,21 +1,14 @@
-<figure>
-    <img src="./images/Garbolink.png"
-         alt="markdown_extensions"
-         width="400"
-         height="140">
-</figure>
+## Garbolink - ESE5180 Crazy Wednesday
 
-# Garbolink - ESE5180-Crazy-Wednesday
+## URLs
 
-## GitHub Pages Website
+- Github Repository URL: https://github.com/ese5180/fp-f24-report-website-t01-crazy-wednesday.git
 
-https://ese5180.github.io/fp-f24-report-website-t01-crazy-wednesday/
+- Github Pages Website URL: https://ese5180.github.io/fp-f24-report-website-t01-crazy-wednesday/
 
-## GitHub URL
+- Demo Video URL: https://youtu.be/L2EH9ioGY6c
 
-https://github.com/ese5180/fp-f24-report-website-t01-crazy-wednesday.git
-
-## Team Selection
+## About Team
 
 Team Name: Crazy_Wednesday
 
@@ -25,7 +18,7 @@ Team Name: Crazy_Wednesday
 | Yining Xia       | ynxia@seas.upenn.edu    |
 | Binsheng Zhang   | binsheng@seas.upenn.edu |
 
-## 0 About GarboLink
+## About GarboLink
 
 The GarboLink is an advanced **smart garbage collection system** that integrates IoT, edge computing, and cloud computing to optimize waste management. The system is designed to monitor the trash level and odor level of garbage bins and transmit the data to the cloud. It uses Cellular to ensure seamless connectivity to cloud. The system also aims to provide route planning for garbage trucks, improving efficiency and reducing operational costs.
 
@@ -33,7 +26,7 @@ System Block Diagram:
 
 ![GarbageCollectionSystem](images/GarbageCollectionSystem_MVP.png)
 
-## 1. Evolution of the IoT Venture Pitch: Key Changes Throughout the Project
+## 1 Evolution of the IoT Venture Pitch: Key Changes Throughout the Project
 
 ### 1.1 Target Market & Demographics
 
@@ -84,7 +77,7 @@ System Block Diagram:
     <img src="./images/global-smart-waste-management-market-size-2022-2030.png"
         alt="markdown_extensions"
         width="500"
-        height="320">
+        height="280">
   </figure>
 
   - [Statista Report: Smart Waste Management Market Size (2022-2030)](https://www-statista-com.eu1.proxy.openathens.net/statistics/1286398/global-smart-waste-management-market-size/)
@@ -96,14 +89,6 @@ System Block Diagram:
 #### **What competitors are already in the space?**
 
 - **Proposal & Demo Version**:
-
-  - Several notable competitors in the smart waste management industry include **Bigbelly** and **Sensoneo**, each offering unique strengths.
-
-  - [**Bigbelly**](https://bigbelly.com/products/bigbelly-solar-smart-compost-bin) specializes in solar-powered waste compactors that reduce bin emptying frequency by increasing bin capacity through compaction. This system is ideal for urban areas and high-traffic locations, leveraging renewable energy to lower both operational costs and environmental impact.
-
-  - [**Sensoneo**](https://sensoneo.com/smart-waste-monitoring/), on the other hand, provides versatile waste level monitoring with both single and multi-sensor options, catering to different bin sizes and types. Known for its advanced route optimization platform, Sensoneo helps waste collection companies minimize fuel costs and emissions by optimizing routes based on real-time fill levels.
-
-  - Garbolink stands out by providing advanced fill and odor tracking with VOC detection fill level monitoring with odor detection which our competitor in the market do not offer. Unlike them, our system runs on a low-power LiPo battery for long life and uses edge processing for data efficiency. We offer cellular network flexibility, ensuring seamless connectivity. While competitors come with additional hardware costs or limitations, Garbolink is not just cost-effective—it's also flexible and priceless."
 
 | **Feature**          | **Garbolink**                                | **Big Belly**                                | **Sensoneo**                                |
 |----------------------|-----------------------------------------------|----------------------------------------------|---------------------------------------------|
@@ -197,6 +182,7 @@ Specifies hardware components for GarboLink, including sensors, microcontrollers
 - **VOC:** Volatile Organic Compounds  
 
 **Functionality:**
+
 | **HRS ID** | **Requirement**                                                                                  | **Status**                                                                                  |
 |------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | HRS 01     | Use Nordic nRF9160 DK for data collection and computation.                                       | **Completed:** Functional with two sensors.                                               |
@@ -238,6 +224,8 @@ Specifies hardware components for GarboLink, including sensors, microcontrollers
 
 ![alt text](images/power5.png)
 
+---
+
 #### **Hardware Costs**
 
 |                           | **Part Name**                    | **Digi-Key Part Number**  | **Unit Price** | **Current**                               | **Voltage**   | **Part Link** |
@@ -248,13 +236,19 @@ Specifies hardware components for GarboLink, including sensors, microcontrollers
 | Power                     | 3.7V 2000mAh 103454 Lipo         | Amazon Source             | $12.99         | Peak Load Current 2A                      | 3.7V          | [EEMB 3.7V 2000mAh 103454 Lipo](https://www.amazon.com/EEMB-2000mAh-Battery-Rechargeable-Connector/dp/B08214DJLJ?th=1) |
 | NFC                       | 10 Pcs NFC Tags                  | Amazon Source             | $7.99          | X                                         | X          | [NFC Tag](https://www.amazon.com/dp/B075CFXY8V/ref=twister_B09SB4TX18?_encoding=UTF8&th=1) |
 
-The system is going to use 1 ultrasonic sensor, one air quality sensor and an NFC tag for each system. So the total hardware cost for one system is:
+The system is going to use 1 ultrasonic sensor, one air quality sensor, and an NFC tag for each system. The total hardware cost for one system is:
 
-$$ 1 * \text{MCU} + 1 * \text{Ultrasonic sensor} + 1 * \text{Air quality sensor} + 1 * \text{Power} +1 * \text{NFC Tag} = 155.0 + 34.95 + 22.50 + 12.99 + 0.35 ≈ 226 $$
+![alt text](images/power6.png)
+
+Substituting values:
+
+![alt text](images/power7.png)
 
 Total sensor cost:
 
-$$ 1 * \text{Ultrasonic sensor} + 1 * \text{Air quality sensor}  = 34.95 + 22.50 ≈ 57 $$
+![alt text](images/power8.png)
+
+---
 
 #### **Software Costs**
 
@@ -273,8 +267,10 @@ $$ 1 * \text{Ultrasonic sensor} + 1 * \text{Air quality sensor}  = 34.95 + 22.50
   - Request for storingg message of $0.0001 (assuming 12 messages stored per day over 30 days). 
 
   - The total monthly cost per device can be calculated as follows:
+  
+   ![alt text](images/power9.png)
 
-$$ \text{Total Cost}=0.1 \text{ (Registration)}+0.001×30 \text{ (Location)}+0.1 \text{ (OTA)}+0.0001×12×30 \text{ (Store Message)}=0.266 $$
+   ![alt text](images/power10.png)
 
   - This results in a total monthly cost of $0.266 per device for using nRF Cloud services.
 
@@ -284,25 +280,29 @@ $$ \text{Total Cost}=0.1 \text{ (Registration)}+0.001×30 \text{ (Location)}+0.
 
 - **The total software costs for one device per month is:**
 
-$$ 0.266  \text{ (NRF Cloud)} + 15.85 \text{ (Mobile Data)} = 16.116 $$
+![alt text](images/power11.png)
 
 ---
 
-## 2. Key Successes: What Went Well and Why?
+## 2 Key Successes: What Went Well and Why?
 
 - One of the key successes of our project was the successful integration of multiple complex technologies, including Nordic's hardware platform, the Zephyr RTOS, LTE connectivity, nRF Cloud services, and Memfault for monitoring and debugging. This integration demonstrates our ability to effectively combine cutting-edge tools and frameworks into a cohesive and functional system.
 
 - Additionally, we successfully built and deployed our code across different Windows operating systems, including Windows 10 and Windows 11, as well as under various system configurations. This ensures the portability and robustness of our development environment, making it adaptable for different users and setups.
 
 - These accomplishments are significant because they highlight not only our technical expertise but also our attention to compatibility and usability. By ensuring the seamless integration of diverse components and achieving consistent builds across platforms, we have created a reliable and scalable foundation for further development and deployment of our system.
+  
+---
 
-## 3. Challenges and Lessons Learned: What Didn’t Go Well and Why?
+## 3 Challenges and Lessons Learned: What Didn’t Go Well and Why?
 
 - Our project’s security implementations did not progress as intended, primarily due to time constraints, complexity, and a lack of dedicated expertise. While we initially aimed to encrypt data transmissions, verify signed firmware updates, and implement secure boot features, these measures were repeatedly deprioritized as we focused on foundational functionality and reliable system integration. 
 
 - The advanced nature of embedded security, along with the learning curve involved, made it difficult to address these goals effectively within our limited timeframe. Consequently, many planned security enhancements remained incomplete or only partially realized by the end of the project.
 
-## 4. Optimizing Development: Lessons for Future Approaches with Limited Time and Resourcesa
+---
+
+## 4 Optimizing Development: Lessons for Future Approaches with Limited Time and Resourcesa
 
 - If we had to do it again, we would make several adjustments to our development approach to maximize the use of finite time and resources.
 
@@ -314,11 +314,13 @@ $$ 0.266  \text{ (NRF Cloud)} + 15.85 \text{ (Mobile Data)} = 16.116 $$
 
 - These changes would enhance the functionality and scalability of the system, providing better decision-making tools and an improved overall user experience. However, they would need to be balanced carefully against time and budget constraints to ensure feasibility.
 
-## 5. Refining the System: Potential Design Changes Post-Development
+---
 
-### 5.1 Was your wireless communication protocol the correct choice?
+## 5 Refining the System: Potential Design Changes Post-Development
 
-- Yes, I believe cellular was the correct choice for our wireless communication protocol. Cellular connectivity ensures that our system can communicate reliably in nearly any location, which is critical for use cases where coverage is a priority. Unlike other wireless communication protocols such as Wi-Fi or Bluetooth, cellular networks provide broad geographic coverage without the need for additional infrastructure, making it ideal for applications like ours.
+### 5.1 Was the wireless communication protocol the correct choice?
+
+- Yes, we believe cellular was the correct choice for our wireless communication protocol. Cellular connectivity ensures that our system can communicate reliably in nearly any location, which is critical for use cases where coverage is a priority. Unlike other wireless communication protocols such as Wi-Fi or Bluetooth, cellular networks provide broad geographic coverage without the need for additional infrastructure, making it ideal for applications like ours.
 
 - However, this choice does come with trade-offs. One of the main challenges is the added cost of purchasing mobile data plans, which can increase operational expenses, especially as the system scales to more devices. Despite this, the benefits of ubiquitous connectivity outweigh the costs, as it ensures that the system remains functional in diverse environments, including remote or rural areas where other communication methods may be unavailable.
 
@@ -330,7 +332,7 @@ $$ 0.266  \text{ (NRF Cloud)} + 15.85 \text{ (Mobile Data)} = 16.116 $$
 
 - Overall, transitioning to camera-based sensors would enhance the system’s functionality and provide more actionable data for decision-making.
 
-### 5.3 Did your target market want something different?
+### 5.3 Did the target market want something different?
 
 - Our target market appears to value the core functionality we provided, but there are areas where their needs might differ from our current implementation. For example, while our system focuses on measuring bin fullness and optimizing waste collection, some potential users expressed interest in additional features such as waste categorization for recycling, real-time notifications for bin maintenance, or predictive analytics to forecast when bins will be full based on historical data.
 
@@ -342,9 +344,9 @@ $$ 0.266  \text{ (NRF Cloud)} + 15.85 \text{ (Mobile Data)} = 16.116 $$
 
 ---
 
-## In addition to these questions, include evidence of your product working
+## 6 Additionals
 
-### 1. Images of your MVP device
+### 6.1 MVP device
 
   <figure>
     <img src="./images/Device.jpg"
@@ -353,22 +355,13 @@ $$ 0.266  \text{ (NRF Cloud)} + 15.85 \text{ (Mobile Data)} = 16.116 $$
         height="550">
   </figure>
 
-### 2. A video demonstrating your Core Product Function and Memfault integration features
+### 6.2 Demo Video
 
 [Watch our video on YouTube](https://youtu.be/L2EH9ioGY6c)
 
-### 3. Anything else you think is relevant to the project
+### 6.3 Project Demo Day
 
-  <figure>
-    <img src="./images/demo_1.JPG"
-        alt="markdown_extensions"
-        width="600"
-        height="400">
-  </figure>
+![pic](/images/demo_1.JPG)
 
-  <figure>
-    <img src="./images/demo_2.jpg"
-        alt="markdown_extensions"
-        width="600"
-        height="350">
+![pic](/images/demo_2.jpg)
 
